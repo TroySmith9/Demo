@@ -12,7 +12,7 @@ public class UserDao {
 	private  ResultSet rs = null;
 	private  String url = "jdbc:mysql://localhost:3306/test";
 	private  String user = "root";
-	private  String password = "root"; 
+	private  String password = "mysql"; 
 	private User u = null;
 	
 	public  Object queryInfoByName(String name){

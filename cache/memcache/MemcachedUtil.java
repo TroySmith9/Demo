@@ -20,6 +20,11 @@ public class MemcachedUtil {
 	 private static SockIOPool pool = null;
 	    private static MemCachedClient mcc = null;
 	    
+	    public static void main(String[] args) {
+	    	getSockIOPool();
+	    	System.out.println("aaa");
+		}
+	    
 	    
 	    public static  MemCachedClient getInitMemCached() {
 	    	if(pool==null){
@@ -42,7 +47,8 @@ public class MemcachedUtil {
 	    public static SockIOPool getSockIOPool() {
 	    	String url = "";
 	    	String path = new File(MemcachedUtil.class.getResource("/").getFile()).getAbsolutePath();
-	    	url = path+"\\memcach.properties";
+	    	System.out.println("memcach-path:"+path);
+	    	url = path+"\\memcache\\memcach.properties";
 	 		Properties props = new Properties();
 			InputStream in = null;
 			try {
@@ -92,8 +98,5 @@ public class MemcachedUtil {
 	        return pool;
 	 
 	    }
-	    public static void main(String[] args) {
-	    	getSockIOPool();
-	    	System.out.println("aaa");
-		}
+	    
 }
