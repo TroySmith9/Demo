@@ -9,21 +9,19 @@ public class FileDealUtils {
 	private static List<File> fileList = new ArrayList<>();
 
 	public static void main(String[] args) {
-		String path = "";
+		String path = "E:\\Coding/php从入门到精通-传智播客-韩顺平";
 		File file = new File(path);
-		System.out.println(file.getAbsolutePath());
-		System.out.println(file.getPath());
 		
-//		getAllFiles(path);
-//		replaceFileNames("","");
+		getAllFiles(path);
+		replaceFileNames("传智播客_韩顺平_php从入门到精通 视频教程 ","");
 	}
 
-	public static void replaceFileNames(String old, String newname) {
+	public static void replaceFileNames(String old, String replacement) {
         for (File file : fileList) {
-        	String oldname=file.getName();
-        	oldname.replaceAll("", newname);
-//        	file.
-        	file.renameTo(new File(""));
+        	String oldpath=file.getPath();
+        	String newpath=oldpath.replaceAll(old, replacement);
+        	file.renameTo(new File(newpath));
+//        	System.out.println(newpath);
 		}
 	}
 
