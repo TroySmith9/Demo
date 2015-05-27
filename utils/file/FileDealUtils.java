@@ -6,11 +6,10 @@ import java.util.List;
 
 public class FileDealUtils {
 
-	private static List<File> fileList = new ArrayList<>();
+	private static List<File> fileList = new ArrayList<File>();
 
 	public static void main(String[] args) {
 		String path = "E:\\Coding/php从入门到精通-传智播客-韩顺平";
-		File file = new File(path);
 		
 		getAllFiles(path);
 		replaceFileNames("传智播客_韩顺平_php从入门到精通 视频教程 ","");
