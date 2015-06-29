@@ -1,8 +1,9 @@
 package cn;
 
 import java.io.File;
-import java.lang.reflect.Constructor;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -12,28 +13,15 @@ public class Test {// extends Date
 	private String code = null;
 	private String name = null;
 
-	public static void main(String[] args) {
-
-		// compareIntAndInteger();
-		// testHashcode();
-
-		// testStringHashcode();
-		// new Test().test();
-
-		// renameFile("E:\\Coding/Java高级_尚学堂_高淇");
-
-		// testMapEntry();
+	public static void main( String[] args ) {
+//		Date date=new Date();
+		List<String> list=new ArrayList<String>();
+		System.out.println(list.size());
+//		System.out.println(new Long(1).toString());
 		
-		PolyTest.class.getAnnotations();
-		try {
-			Constructor cons=PolyTest.class.getConstructor(null);
-			cons.newInstance(null);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
 	}
 
+	
 	 static void testMapEntry() {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("01", "ab");
