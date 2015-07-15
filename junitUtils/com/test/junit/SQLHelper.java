@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class SQLHelper {
 	public static final String driver = "com.mysql.jdbc.Driver";
 	// URL指向要访问的数据库名scutcs
-	public static final String url = "jdbc:mysql://192.168.6.10:3306/xjs_money_ssj?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&rewriteBatchedStatements=true";
+	public static final String url = "jdbc:mysql://dfafeaf:3306/xjs_money_ssj?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&rewriteBatchedStatements=true";
 //	private static final SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
 //	private static Date now = new Date();
 //	private static Calendar c = Calendar.getInstance();
@@ -23,7 +23,7 @@ public class SQLHelper {
 	private static Connection getConnection(){
 		try{
 			Class.forName(driver);
-			Connection conn = DriverManager.getConnection(url,"root","kingdee");
+			Connection conn = DriverManager.getConnection(url,"root","短发呢啊发发");
 			return conn;
 		}catch (Exception e) {
 			e.printStackTrace();
