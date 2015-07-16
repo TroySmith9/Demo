@@ -1,9 +1,7 @@
 package cn;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -14,9 +12,14 @@ public class Test {// extends Date
 	private String name = null;
 
 	public static void main( String[] args ) {
+		String srt[] = "|FD|A".split("\\|");
+		for( int i = 0; i < srt.length; i++ ) {
+			System.out.print(srt[i]+",");
+		}
+		System.out.println("  "+srt.length);
 //		Date date=new Date();
-		List<String> list=new ArrayList<String>();
-		System.out.println(list.size());
+//		List<String> list=new ArrayList<String>();
+//		System.out.println(list.size());
 //		System.out.println(new Long(1).toString());
 		
 	}
