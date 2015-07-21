@@ -8,7 +8,6 @@
 	<classpathentry kind="src" path="TestReflection"/>
 <!-- 	<classpathentry kind="src" path="cache"/> -->
 	<classpathentry kind="src" path="conncttionpool"/>
-	<classpathentry kind="src" path="memcache"/>
 	<classpathentry kind="src" path="mongodb"/>
 	<classpathentry kind="src" path="MultiThread"/>
 	<classpathentry kind="src" path="utils"/>
