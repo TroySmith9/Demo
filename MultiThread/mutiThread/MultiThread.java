@@ -1,4 +1,4 @@
-package com.huawei.interview;
+package mutiThread;
 
 public class MultiThread {
 

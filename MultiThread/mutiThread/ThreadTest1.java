@@ -1,4 +1,4 @@
-package com.huawei.interview;
+package mutiThread;
 
 public class ThreadTest1 {
 	private int j;

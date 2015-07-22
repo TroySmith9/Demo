@@ -12,15 +12,13 @@ public class Test {// extends Date
 	private String name = null;
 
 	public static void main( String[] args ) {
-		String srt[] = "|FD|A".split("\\|");
-		for( int i = 0; i < srt.length; i++ ) {
-			System.out.print(srt[i]+",");
-		}
-		System.out.println("  "+srt.length);
-//		Date date=new Date();
-//		List<String> list=new ArrayList<String>();
-//		System.out.println(list.size());
-//		System.out.println(new Long(1).toString());
+//		String srt[] = "|FD|A".split("\\|");
+//		for( int i = 0; i < srt.length; i++ ) {
+//			System.out.print(srt[i]+",");
+//		}
+//		System.out.println("  "+srt.length);
+		
+		System.out.println(System.getProperty( "java.io.tmpdir" ));
 		
 	}
 
