@@ -12,6 +12,8 @@ public class Test {// extends Date
 	private String name = null;
 
 	public static void main( String[] args ) {
+		
+		
 //		String srt[] = "|FD|A".split("\\|");
 //		for( int i = 0; i < srt.length; i++ ) {
 //			System.out.print(srt[i]+",");
