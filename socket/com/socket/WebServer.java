@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.dnion.socket;
+package com.socket;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -28,7 +28,7 @@ import java.net.Socket;
  * @version 
  ***************************************************************
  */
-public class JabberServer {
+public class WebServer {
 
 	public static int PORT = 8080;
 	public static void main(String[] agrs) {

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.dnion.socket;
+package com.socket;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -29,7 +29,7 @@ import java.net.Socket;
  * @version
  *************************************************************** 
  */
-public class JabberClient {
+public class WebClient {
 
 	/**
 	 * 方法名：main 描述： 作者：白鹏飞 日期：2012-8-23 下午01:47:12
@@ -43,7 +43,7 @@ public class JabberClient {
 		PrintWriter pw = null;
 		try {
 			//客户端socket指定服务器的地址和端口号
-			socket = new Socket("127.0.0.1", JabberServer.PORT);
+			socket = new Socket("127.0.0.1", WebServer.PORT);
 			System.out.println("Socket=" + socket);
 			//同服务器原理一样
 			br = new BufferedReader(new InputStreamReader(
