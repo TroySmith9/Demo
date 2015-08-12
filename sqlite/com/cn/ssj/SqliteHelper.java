@@ -15,13 +15,6 @@ import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
 
-// import com.kingdee.mobile.framework.Log;
-// import com.kingdee.mobile.framework.utils.StringUtils;
-// import com.kingdee.youshang.money.server.dbsync.entity.SyncContext;
-// import com.kingdee.youshang.money.server.dbsync.sql.ClientSqlContrainer;
-// import com.kingdee.youshang.money.server.dbsync.sql.client.SqlMapper;
-// import com.kingdee.youshang.money.server.dbsync.sql.client.SqliteResultSet;
-// import com.kingdee.youshang.money.server.dbsync.util.MyStringUtil;
 
 /*******************************************
  * SqliteHelper.java

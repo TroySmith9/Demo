@@ -1,11 +1,6 @@
 package cn.com.mongo4java.dao;
  
 import java.util.List;
- 
-
-
-
-
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -31,7 +26,6 @@ public class BaseDAOImpl implements BaseDAO {
         return false;
     }
  
-    @SuppressWarnings( "rawtypes" )
 	@Override
     public List find(String collectionName, BasicDBObject bean) {
         DB db = MongoDBUtil.getDB();
