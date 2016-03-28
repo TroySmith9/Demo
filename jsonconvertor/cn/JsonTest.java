@@ -31,9 +31,15 @@ public class JsonTest {
 		
 		json.put( "33", new JSONObject() );
 //		json.accumulate( "33", "dd" );
+		System.out.println("json.opt11:"+json.opt("11"));
+		System.out.println("json.opt44:"+json.opt("44"));
+		System.out.println(json.get("44"));
 		
-		json.getJSONObject( "33" ).put( "333", "ccc" );
-		System.out.println(json);
+		net.sf.json.JSONObject  newJs=new net.sf.json.JSONObject ();
+		newJs.put("55", json.opt("44"));
+		newJs.put("66", json.get("44"));
+//		json.getJSONObject( "33" ).put( "333", "ccc" );
+//		System.out.println(json);
 		
 	}
 
