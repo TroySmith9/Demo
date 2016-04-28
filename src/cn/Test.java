@@ -1,13 +1,12 @@
 package cn;
 
 import java.io.File;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-
-import com.google.gson.JsonObject;
 
 public class Test {// extends Date
 
@@ -28,8 +27,7 @@ public class Test {// extends Date
 //		System.out.println("  "+srt.length);
 		
 //		System.out.println(System.getProperty( "java.io.tmpdir" ));
-		System.out.println(new Date(1458755271948l));
-		
+//		System.out.println(new Date("2016-03-20 00:00:00"));
 //		try {
 //			File file=new File("C:\\c.txt");
 //			System.out.println(file.exists());
@@ -66,11 +64,39 @@ public class Test {// extends Date
 //		TestObject obj=new TestObject("hahaha");
 //		changeTestObj(obj);
 //		System.out.println(obj.context);
+//		String detail="[-1]SyncData Error:Abort! null";
+//		String serverId = detail.substring(1, detail.indexOf("]"));
+//		System.out.println(serverId);
+		
+//	   	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+//		List<String> list=new ArrayList<String>();
+//		list.add("aaaa");
+//		list.add("bbbb");
+//		list.add("cccc");
+//		System.out.println(list.subList(1, 3));
+		
+		String sql="select date_format(FCreateTime,'%Y-%m-%d') logday,"
+				+" sum(case when FLogType=0 then 1 else 0 end) syncStep0,"
+				+" sum(case when FLogType=1 then 1 else 0 end) syncStep1,"
+				+" sum(case when FLogType=2 then 1 else 0 end) syncStep2,"
+				+" sum(case when FLogType=3 then 1 else 0 end) syncStep3,"
+				+" sum(case when FLogType=4 then 1 else 0 end) syncStep4,"
+			    +" sum(case when FLogType=5 then 1 else 0 end) syncStep5,"
+			    +" sum(case when FLogType=6 then 1 else 0 end) syncStep6"
+				+" from t_log_sync where FCreateTime>=? and FCreateTime<=? "
+			    +" group by logday";	
+		
+		System.out.println(sql);
+		
+//		System.out.println("android".compareTo("aYMONEY-qq-app"));
+//		System.out.println("MyMoney-qq-app".compareTo("android"));
 //		
+	   	
+		
 	}
 
-	
-	 private static void changeTestObj(final TestObject obj) {
+	 protected static void changeTestObj(final TestObject obj) {
 		obj.context="aaaaaa";
 		System.out.println(obj.context);
 		
@@ -195,6 +221,8 @@ public class Test {// extends Date
 	}
 
 }
+
+
 
 class TestObject{
 	String context;

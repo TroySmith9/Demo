@@ -60,12 +60,6 @@ public class DateUtil
 	}
   
      
-    /**
-     * 
-     * @param start ��ʽҪ��yyyy-MM-dd
-     * @param end ��ʽҪ��yyyy-MM-dd
-     * @return
-     */
     public static int getIntervalMonths(Date start, Date end)
     {
         GregorianCalendar startGC = new GregorianCalendar();
@@ -293,13 +287,18 @@ public class DateUtil
     }
     
    
+    /**
+     * @param args
+     */
     public static void main(String[] args)
     {
-    	Date endDate = DateUtil.getNow();
-		Date beginDate = DateUtil.getYesterday();
-		String beginDateStr = DateUtil.format(beginDate, "yyyy-MM-dd");
-		String endDateStr = DateUtil.format(endDate, "yyyy-MM-dd");
-        System.out.println(beginDateStr);
-        System.out.println(endDateStr);
+//    	Date endDate = DateUtil.getNow();
+//		Date beginDate = DateUtil.getYesterday();
+//		String beginDateStr = DateUtil.format(beginDate, "yyyy-MM-dd");
+//		String endDateStr = DateUtil.format(endDate, "yyyy-MM-dd");
+//        System.out.println(beginDateStr);
+//        System.out.println(endDateStr);
+        
+        System.out.println(new Date(1448961249l));
     }
 }
