@@ -1,9 +1,13 @@
 package cn;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.util.ArrayList;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -76,18 +80,7 @@ public class Test {// extends Date
 //		list.add("cccc");
 //		System.out.println(list.subList(1, 3));
 		
-		String sql="select date_format(FCreateTime,'%Y-%m-%d') logday,"
-				+" sum(case when FLogType=0 then 1 else 0 end) syncStep0,"
-				+" sum(case when FLogType=1 then 1 else 0 end) syncStep1,"
-				+" sum(case when FLogType=2 then 1 else 0 end) syncStep2,"
-				+" sum(case when FLogType=3 then 1 else 0 end) syncStep3,"
-				+" sum(case when FLogType=4 then 1 else 0 end) syncStep4,"
-			    +" sum(case when FLogType=5 then 1 else 0 end) syncStep5,"
-			    +" sum(case when FLogType=6 then 1 else 0 end) syncStep6"
-				+" from t_log_sync where FCreateTime>=? and FCreateTime<=? "
-			    +" group by logday";	
-		
-		System.out.println(sql);
+		callback();
 		
 //		System.out.println("android".compareTo("aYMONEY-qq-app"));
 //		System.out.println("MyMoney-qq-app".compareTo("android"));
@@ -103,6 +96,31 @@ public class Test {// extends Date
 	}
 
 
+	 static void callback(){
+		 try {
+			URL url=new URL("http://test.feidee.net/stat/weixin_ad.do?muid=f05d122eac30681772a62812b23df2f3&click_time=1431403499&appid=372353614&click_id=007210548a030059ccdfd1d4&app_type=ios&advertiser_id=1606583");
+			URLConnection conn=url.openConnection();
+			conn.connect();
+			InputStream is=conn.getInputStream();
+			BufferedReader br=new BufferedReader(new InputStreamReader(is));
+
+			String line = null;
+			StringBuffer result2=new StringBuffer();
+			while((line = br.readLine()) != null){
+				result2.append(line);
+			}
+			System.out.println(result2);
+			
+			StringBuffer result=new StringBuffer();
+			while(br.readLine()!=null){
+				result.append(br.readLine());
+			}
+			System.out.println(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	 }
+	 
 	static void testMapEntry() {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("01", "ab");
