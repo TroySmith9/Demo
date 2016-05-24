@@ -24,10 +24,17 @@ public class ZuoyouCallback {
 
 	public static void main(String[] args) {
 		try {
-			for (int i = 500; i < 550; i++) {
+			int i = 1800;
+			while(i<=2000){
 				String url ="http://weixin.gxshangyou.com/index.php?g=Wap&m=Zuoyou&a=power&token=iuqgfm1453706336&reid=9&id=197&open_id=&wecha_id=o8inVt-ec-LsZgHZjdoUCEx6h"+ i;
-				System.out.println(callBack(url));
+				System.out.println(callBack(url)+" "+i);
+				i++;
+				Thread.sleep(10*60*1000);
 			}
+//			for (int i = 950; i < 1000; i++) {
+//				String url ="http://weixin.gxshangyou.com/index.php?g=Wap&m=Zuoyou&a=power&token=iuqgfm1453706336&reid=9&id=197&open_id=&wecha_id=o8inVt-ec-LsZgHZjdoUCEx6h"+ i;
+//				System.out.println(callBack(url));
+//			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

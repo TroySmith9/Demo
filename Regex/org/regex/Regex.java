@@ -18,14 +18,25 @@ public class Regex {
 //		System.out.println( Pattern.matches( "[0-9]{6}", "200038" ) );
 //		System.out.println( Pattern.matches( "//d{6}", "200038" ) );
 //		// 验证电话号码
-//		System.out.println( Pattern.matches( "[0-9]{3,4}//-?[0-9]+", "02178989799" ) );
-		getDate( "Nov 10,2009" );
 //		charReplace();
 		// 验证身份证:判断一个字符串是不是身份证号码，即是否是15或18位数字。
 //		System.out.println( Pattern.matches( "^//d{15}|//d{18}$", "123456789009876" ) );
 //		getString( "D:/dir1/test.txt" );
 //		getChinese( "welcome to china,江西奉新,welcome,你!" );
 //		validateEmail( "luosijin123@163.com" );
+		
+		String pattern="^*.[iPad|iPhone].*OS ().*like .*$";
+		String str1="Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75 ";
+		Pattern p=Pattern.compile(pattern);
+		System.out.println(Pattern.matches(pattern, str1));
+		
+		Matcher m = p.matcher(str1);
+		System.out.println(m.groupCount());
+		System.out.println(m.group());
+//		for (int i = 0; i < m.groupCount(); i++) {
+//			System.out.println(m.group(i));
+//		}
+		
 	}
 
 	public static void getDate( String str ) {

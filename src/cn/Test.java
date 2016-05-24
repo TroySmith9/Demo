@@ -4,13 +4,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Test {// extends Date
 
@@ -30,62 +33,23 @@ public class Test {// extends Date
 //		}
 //		System.out.println("  "+srt.length);
 		
-//		System.out.println(System.getProperty( "java.io.tmpdir" ));
-//		System.out.println(new Date("2016-03-20 00:00:00"));
+		
+		System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(1463902922000l)));
 //		try {
-//			File file=new File("C:\\c.txt");
-//			System.out.println(file.exists());
-//			file.delete();
+//			System.out.println("Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75".length());
+//			//System.out.println(URLEncoder.encode("Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75", "utf-8"));;
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
-//		JsonObject jsObj=new JsonObject();
-		
-		
-		
-//		String str="YmxvZ0B6aWh1YS5saQo=";
-//		try {
-//			
-//			System.out.println(new String(Base64.getDecoder().decode(str),"utf-8"));
-////			System.out.println();
-//			System.out.println(new String(Base64.getEncoder().encode("blog@zihua.li".getBytes()),"utf-8"));
-//			System.out.println(new String(Base64.getDecoder().decode("YmxvZ0B6aWh1YS5saQ=="),"utf-8"));
-//			
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		Base64.getDecoder("");
-//		System.out.println("out log!");
-//		new Thread(new Runnable() {
-//			
-//			@Override
-//			public void run() {
-//				System.out.println("Runnable log");
-//				
-//			}
-//		}).start();
-		
-//		TestObject obj=new TestObject("hahaha");
-//		changeTestObj(obj);
-//		System.out.println(obj.context);
-//		String detail="[-1]SyncData Error:Abort! null";
-//		String serverId = detail.substring(1, detail.indexOf("]"));
-//		System.out.println(serverId);
-		
-//	   	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
-//		List<String> list=new ArrayList<String>();
-//		list.add("aaaa");
-//		list.add("bbbb");
-//		list.add("cccc");
-//		System.out.println(list.subList(1, 3));
-		
-		callback();
-		
 //		System.out.println("android".compareTo("aYMONEY-qq-app"));
 //		System.out.println("MyMoney-qq-app".compareTo("android"));
-//		
-	   	
+		
+		Pattern p=Pattern.compile("");
+		Matcher m=p.matcher("");
+		System.out.println(m.groupCount());
+		while(m.find()){
+			System.out.println(m.group());
+		}
 		
 	}
 

@@ -55,49 +55,9 @@ public final class SysLoginLogUtil {
 
 	/**
 	 * 添加登录日志
-	 * @param feideeId 用户ID
-	 * @param fname 用户名
-	 * @param realIp 真实IP
-	 * @param agent 终端信息 iphone,android,web
-	 * @param accType 账户类型phone,email,unknown
-	 * @param channel 渠道：licai kaniu,ssj
-	 * @param actionName 请求接口名称
-	 * @param extend 扩展字段
-	 * @param desc 描述
-	 */
-	public void saveLoginLog(Long feideeId, String fname, String realIp, String agent, String accType, String channel, String actionName,
-			String extend, String desc) {
-		Object log = new Object();
-		// log.setFeideeUserId(feideeId);
-		// log.setName(fname);
-		// log.setRealIp(realIp);
-		// log.setAgent(agent);
-		// log.setAccType(accType);
-		// log.setChannel(channel);
-		// log.setActionName(actionName);
-		// log.setExtend(extend);
-		// log.setDesc(desc);
-		saveLoginLog(log);
-	}
-
-	/**
-	 * 添加登录日志
-	 * @param feideeId
-	 * @param fname
-	 * @param realIp
-	 * @param agent
-	 * @param channel
-	 * @param actionName
-	 */
-	public void saveLoginLog(Long feideeId, String fname, String realIp, String agent, String accType, String channel, String actionName) {
-		saveLoginLog(feideeId, fname, realIp, agent, accType, channel, actionName, null, null);
-	}
-
-	/**
-	 * 添加登录日志
 	 * @param log
 	 */
-	public void saveLoginLog(Object log) {
+	public void saveLog(Object log) {
 		if (null != log) {
 			logQueue.add(log);
 		}
