@@ -1,7 +1,6 @@
 package cn.partern;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import org.apache.commons.lang3.StringUtils;
 
 public class RegexTest {
 
@@ -9,14 +8,24 @@ public class RegexTest {
 		testSpilt();
 	}
 
+	
+	
+	
+	
+	
 	private static void testSpilt() {
-		String modelPattern="^*.[iPad|iPhone].*";
-//		String versionPattern="^*.OS .*like .*";
-		String str1="Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75";
+		String ipSplit = "120.236.31.84, 10.201.1.13";
+		if (!StringUtils.isEmpty(ipSplit)) {
+			System.out.println(ipSplit.split("\\s*,\\s*")[0]);;
+		}
 		
-		Pattern p=Pattern.compile(modelPattern);
-		Matcher m=p.matcher(str1);
-		System.out.println(m.matches());
-		System.out.println(m.group());
+		
+//		String modelPattern="^*.[iPad|iPhone].*";
+//		//String versionPattern="^*.OS .*like .*";
+//		String str1="Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75";
+//		Pattern p=Pattern.compile(modelPattern);
+//		Matcher m=p.matcher(str1);
+//		System.out.println(m.matches());
+//		System.out.println(m.group());
 	}
 }

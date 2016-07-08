@@ -31,15 +31,21 @@ public class JsonTest {
 		
 		json.put( "33", new JSONObject() );
 //		json.accumulate( "33", "dd" );
-		System.out.println("json.opt11:"+json.opt("11"));
-		System.out.println("json.opt44:"+json.opt("44"));
-		System.out.println(json.get("44"));
+//		System.out.println("json.opt11:"+json.opt("11"));
+//		System.out.println("json.opt44:"+json.opt("44"));
+//		System.out.println(json.get("44"));
 		
 		net.sf.json.JSONObject  newJs=new net.sf.json.JSONObject ();
 		newJs.put("55", json.opt("44"));
 		newJs.put("66", json.get("44"));
 //		json.getJSONObject( "33" ).put( "333", "ccc" );
 //		System.out.println(json);
+		
+//		String group="{'$group':{'_id':{'syncDate':{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}},'serverId':'$serverId'},'count':{'$sum':1}}}";
+		String group="{'$group':{'_id':{'syncDate':{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}},'serverId':'$serverId'},'count':{'$sum':1}}}";
+		System.out.println(JSONObject.parse(group));
+		System.out.println(JSONObject.parse("{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}}"));;
+//		System.out.println("{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}}");
 		
 	}
 

@@ -15,7 +15,7 @@ import org.apache.commons.logging.LogFactory;
  * 功能描述：日志（生产者-消费者模式）
  */
 public final class SysLoginLogUtil {
-	private static final Log logger = LogFactory.getLog(SysLoginLogUtil.class);
+//	private static final Log logger = LogFactory.getLog(SysLoginLogUtil.class);
 
 	/** 全局唯一实例 */
 	private static volatile SysLoginLogUtil instance = null;
@@ -111,7 +111,7 @@ public final class SysLoginLogUtil {
 					}
 				} catch (Throwable e) {
 					// 防止异常导致消费者任务结束
-					logger.error("LogConsumer error!", e);
+//					logger.error("LogConsumer error!", e);
 				}
 			}
 		}
