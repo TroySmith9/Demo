@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +13,7 @@ public class ListMapTest {
 		map.put("a", 111);
 		map.put("b", "bbb");
 		map.put("c", new Object());
-		List<Object> list = Arrays.asList(map);
+		List<Map<Object, Object>> list = Arrays.asList(map);
 		System.out.println(list.size());
 		for (Object object : list) {
 			System.out.println(object);
@@ -23,7 +24,7 @@ public class ListMapTest {
 		map2.put(new MapDim("b1", "b2"), "bbb");
 		map2.put(new MapDim("c1", "c2"), new Object());
 		System.out.println(map2.values().size());
-		List<Object> dimList = Arrays.asList(map2.values());
+		List<Collection<Object>> dimList = Arrays.asList(map2.values());
 		System.out.println(dimList.size());
 		for (Object object : map2.values()) {
 			System.out.println(object);

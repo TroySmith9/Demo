@@ -16,36 +16,13 @@ public class JsonTest {
 //	JSON json=com.kingdee.youshang.json.JSON.parse( "" );
 	
 	public static void main( String[] args ) {
+		
+		String str="{deviceHash:9876543210,sdkVersion: 1025,model:{ hash:123456789, model:12345, cpu_count:8, device_total_memory:1024000, app_max_memory:102400000, screen_with:1092, screen_height:786} }";
+		System.out.println(str);
+		JSONObject js=JSONObject.parseObject(str);
 //		convertStr2Json();
 //		buildJson();
 		
-//		Map map=new HashMap<String, String>();
-		net.sf.json.JSONObject json=new net.sf.json.JSONObject();
-		
-		json.put( "11", "aa" );
-		json.put( "11", "bb" );
-		json.accumulate( "11", "cc" );
-		json.accumulate( "22", "cc" );
-		json.accumulate( "22", "" );
-		json.accumulate( "22", null );
-		
-		json.put( "33", new JSONObject() );
-//		json.accumulate( "33", "dd" );
-//		System.out.println("json.opt11:"+json.opt("11"));
-//		System.out.println("json.opt44:"+json.opt("44"));
-//		System.out.println(json.get("44"));
-		
-		net.sf.json.JSONObject  newJs=new net.sf.json.JSONObject ();
-		newJs.put("55", json.opt("44"));
-		newJs.put("66", json.get("44"));
-//		json.getJSONObject( "33" ).put( "333", "ccc" );
-//		System.out.println(json);
-		
-//		String group="{'$group':{'_id':{'syncDate':{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}},'serverId':'$serverId'},'count':{'$sum':1}}}";
-		String group="{'$group':{'_id':{'syncDate':{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}},'serverId':'$serverId'},'count':{'$sum':1}}}";
-		System.out.println(JSONObject.parse(group));
-		System.out.println(JSONObject.parse("{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}}"));;
-//		System.out.println("{'$dateToString':{'format':'%Y-%m-%d','date':'$createTime'}}");
 		
 	}
 
