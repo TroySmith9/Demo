@@ -69,9 +69,9 @@
 
 		<!-- memcached -->
 		<dependency>
-			<groupId>com.google</groupId>
+			<groupId>com.googlecode.xmemcached</groupId>
 			<artifactId>xmemcached</artifactId>
-			<version>1.4.2</version>
+			<version>1.4.3</version>
 		</dependency>
 
 		<dependency>
@@ -103,7 +103,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- json -->
