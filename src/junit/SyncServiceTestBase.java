@@ -51,30 +51,27 @@ public class SyncServiceTestBase {
 	
 	/**
 	 * 从文件中读取字符串，读取的文件地址为src/test/resources/testCase/testCaseType/methodName/fileName
-	 * @param testCaseType Service类型
-	 * @param methodName 测试方法名
-	 * @param fileName 文件名
+	 * @param filepath
 	 * @return
 	 */
-	public static String loadFromFile( String path ) {
-		String filePath = TESTCASE_FILE_PATH + path ;;
-		File result = new File( filePath );
+	public static String loadFromFile( String filepath ) {
+		String filePath = TESTCASE_FILE_PATH + filepath ;;
+		File resultFile = new File( filePath );
 		char[] buff = new char[ 64 ];
 		int len = 0;
 		String resultStr = "";
 		try {
-			FileReader fd = new FileReader( result );
+			FileReader fd = new FileReader( resultFile );
 			while( ( len = fd.read( buff ) ) != -1 ) {
 				resultStr += new String( buff, 0, len );
 			}
 			fd.close();
-			return resultStr;
 		} catch( FileNotFoundException e ) {
 			e.printStackTrace();
 		} catch( IOException e ) {
 			e.printStackTrace();
 		}
-		return "";
+		return resultStr;
 	}
 
 	/**

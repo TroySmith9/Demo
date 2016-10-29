@@ -36,10 +36,6 @@ public class JsonTest {
 		jsonobj.put("provider", provider);
 		System.out.println(jsonobj.toString());
 		
-		net.sf.json.JSONObject js=new net.sf.json.JSONObject();
-		js.accumulate( "111", "46dafa" );
-		js.accumulate("sync_data", provider);
-		System.out.println(js.toString());
 		// JsonObject jso=new JsonObject();
 		// jso.a
 		
