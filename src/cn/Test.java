@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -29,9 +30,9 @@ public class Test {// extends Date
 	public static void main(String[] args) {
 		Object str="";
 		System.out.println((Long) str);
-//		String syncLabel1=labeldtf.format(new Date(1467365592107l))+String.valueOf(25076939832l);
+		String syncLabel1=labeldtf.format(new Date(1467365592107l))+String.valueOf(25076939832l);
 //		String syncLabel2=labeldtf.format(new Date(1467365594278l))+String.valueOf(25076939832l);
-//		System.out.println(syncLabel1);
+		System.out.println(syncLabel1);
 //		System.out.println(syncLabel2);
 //		System.out.println("syncLabel1:"+syncLabel1+" syncLabel2:"+syncLabel2);
 		// String datePartten =
@@ -170,7 +171,7 @@ public class Test {// extends Date
 			sb.append("\tat " + trace[i]).append("\r\n");
 		}
 
-		Throwable ourCause = e.getCause();
+//		Throwable ourCause = e.getCause();
 		return sb.toString();
 	}
 
@@ -319,18 +320,33 @@ public class Test {// extends Date
 }
 
 class HighLevelException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4092517673855300016L;
+
 	HighLevelException(Throwable cause) {
 		super(cause);
 	}
 }
 
 class MidLevelException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8789342203581617742L;
+
 	MidLevelException(Throwable cause) {
 		super(cause);
 	}
 }
 
 class LowLevelException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3718606650959329222L;
 }
 
 class TestObject {

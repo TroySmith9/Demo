@@ -6,6 +6,8 @@ import java.util.Vector;
 
 public class ThrowableInformation implements java.io.Serializable {
 
+	private static final long serialVersionUID = -4288960051884185707L;
+
 	private transient Throwable throwable;
 
 	private String[] rep;
