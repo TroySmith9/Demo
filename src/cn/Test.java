@@ -7,13 +7,12 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import org.apache.commons.lang3.StringUtils;
 
+import org.apache.commons.lang3.StringUtils;
 import org.bson.Document;
 import org.slf4j.LoggerFactory;
 
@@ -23,16 +22,28 @@ public class Test {// extends Date
 
 	private String name = null;
 
-	private static SimpleDateFormat labeldtf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+	protected static SimpleDateFormat labeldtf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 
 	
 	public static void main(String[] args) {
-		Object str="";
-		System.out.println((Long) str);
-		String syncLabel1=labeldtf.format(new Date(1467365592107l))+String.valueOf(25076939832l);
-//		String syncLabel2=labeldtf.format(new Date(1467365594278l))+String.valueOf(25076939832l);
-		System.out.println(syncLabel1);
-//		System.out.println(syncLabel2);
+		String sql="select sum(case when FLogType=0 then 1 else 0 end) syncStep0,"
+				+" sum(case when FLogType=1 then 1 else 0 end) syncStep1,"
+				+" sum(case when FLogType=2 then 1 else 0 end) syncStep2,"
+				+" sum(case when FLogType=3 then 1 else 0 end) syncStep3,"
+				+" sum(case when FLogType=4 then 1 else 0 end) syncStep4,"
+				+" sum(case when FLogType=5 then 1 else 0 end) syncStep5,"
+				+" sum(case when FLogType=6 then 1 else 0 end) syncStep6,"
+				+" sum(case when FLogType=9 then 1 else 0 end) abortCount"
+				+" from t_sync_log where FCreateTime>=? and FCreateTime<=? and FSyncCategory=1";
+		System.out.println(sql);
+//		String [] strs={"aa","bb"};
+//		System.out.println(String.join("&",strs));
+//		Object str="";
+//		System.out.println((Long) str);
+//		String syncLabel1=labeldtf.format(new Date(1467365592107l))+String.valueOf(25076939832l);
+////		String syncLabel2=labeldtf.format(new Date(1467365594278l))+String.valueOf(25076939832l);
+//		System.out.println(syncLabel1);
+////		System.out.println(syncLabel2);
 //		System.out.println("syncLabel1:"+syncLabel1+" syncLabel2:"+syncLabel2);
 		// String datePartten =
 		// "^2016-(0[1-9]|(10|11|12))-(0[1-9]|[1-2][0-9]|3[0-1]) (([0-1]?[0-9])|([2][0-3])):([0-5][0-9]):([0-5]?[0-9]).*";
