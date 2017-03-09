@@ -14,17 +14,18 @@ public class Client {
 		subject.addObserver(obs1);
 		subject.addObserver(obs2);
 		subject.addObserver(obs3);
-		
+
+		System.out.println(subject.countObservers());
 		//改变subject对象的状态
 		subject.set(3000);
-		System.out.println("===============状态修改了！");
+		System.out.println("===============状态修改:" + subject.hasChanged());
 		//观察者的状态发生了变化
 		System.out.println(obs1.getMyState());
 		System.out.println(obs2.getMyState());
 		System.out.println(obs3.getMyState());
 
 		subject.set(600);
-		System.out.println("===============状态修改了！");
+		System.out.println("===============状态修改:" + subject.hasChanged());
 		//观察者的状态发生了变化
 		System.out.println(obs1.getMyState());
 		System.out.println(obs2.getMyState());

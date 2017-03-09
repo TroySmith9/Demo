@@ -12,7 +12,7 @@ public class Client {
 		b2.setNextLeader(c);
 		
 		//开始请假操作
-		LeaveRequest req1 = new LeaveRequest("TOM", 15, "回英国老家探亲！");
+		LeaveRequest req1 = new LeaveRequest("TOM", 29, "回英国老家探亲！");
 		a.handleRequest(req1);
 		
 	}

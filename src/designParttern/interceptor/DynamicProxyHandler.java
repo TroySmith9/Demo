@@ -19,7 +19,7 @@ public class DynamicProxyHandler implements InvocationHandler {
 	public Object bind(Object business) {
 		this.business = business;
 		return Proxy.newProxyInstance(
-		// 被代理类的ClassLoader
+				// 被代理类的ClassLoader
 				business.getClass().getClassLoader(),
 				// 要被代理的接口,本方法返回对象会自动声称实现了这些接口
 				business.getClass().getInterfaces(),

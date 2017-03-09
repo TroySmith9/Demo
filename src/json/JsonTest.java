@@ -1,15 +1,13 @@
 package json;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Map;
-import java.util.Set;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
+
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 
 public class JsonTest {
@@ -18,13 +16,27 @@ public class JsonTest {
 	
 	public static void main( String[] args ) {
 
-//        String str="{deviceHash:9876543210,sdkVersion: 1025,model:{ hash:123456789, model:12345, cpu_count:8, device_total_memory:1024000, app_max_memory:102400000, screen_with:1092, screen_height:786} }";
-//        System.out.println(str);
-//		String str = "{\tname: 'jack',\tno: 10,\tids: [10, 11, 12, 13],\tmemo: ''}";
-        String str = "{\tname: 'jack',\tno: 10,\tids: [10, 11, 12, 13] ''}";
-		Entity entity = JSON.parseObject(str, Entity.class);
-        System.out.println(entity.toString());
-		System.out.println(entity.getMemo() == null);
+		try {
+			HashMap<String,Object> hashMap=new HashMap<>();
+			for (Map.Entry entry: hashMap.entrySet()){
+				System.out.println(entry.getKey());
+			}
+			
+			FileReader reader=new FileReader(new File("G:/同步问题处理/test.json"));
+			BufferedReader bufferedReader=new BufferedReader(reader);
+			String string=bufferedReader.readLine();
+			System.out.println(string);
+//			JSONObject jsonObject = JSON.parseObject(string);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+//		String str = "{\tname: 'jack',\tno: 10,\tids: [10, 11, 12, 13] ''}";
+//		Entity entity = JSON.parseObject(str, Entity.class);
+//        System.out.println(entity.toString());
+//		System.out.println(entity.getMemo() == null);
 
 //		JSONObject js=JSONObject.parseObject(str);
 //		convertStr2Json();
