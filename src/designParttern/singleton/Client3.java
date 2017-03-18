@@ -20,7 +20,7 @@ public class Client3 {
 				public void run() {
 					
 					for(int i=0;i<1000000;i++){
-//						Object o = SingletonDemo4.getInstance();
+						Object o = SingletonDemo4.getInstance();
 //						Object o = SingletonDemo5.INSTANCE;
 					}
 					

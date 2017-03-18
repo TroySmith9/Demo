@@ -1,0 +1,12 @@
+/bin/
+/target/
+.settings/
+.settings
+.classpath
+.project
+target/
+logs/
+sdklog/
+/jsonconvertor/
+.idea
+libraries/

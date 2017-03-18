@@ -1,9 +1,6 @@
 package designParttern.singleton;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 /**
  * 测试反射和反序列化破解单例模式
@@ -13,14 +10,17 @@ import java.io.ObjectOutputStream;
 public class Client2 {
 	
 	public static void main(String[] args) throws Exception {
-		SingletonDemo6 s1 = SingletonDemo6.getInstance();
-		SingletonDemo6 s2 = SingletonDemo6.getInstance();
-		
+//		SingletonDemo6 s1 = SingletonDemo6.getInstance();
+//		SingletonDemo6 s2 = SingletonDemo6.getInstance();
+
+		SingletonDemo4 s1 = SingletonDemo4.getInstance();
+		SingletonDemo4 s2 = SingletonDemo4.getInstance();
+
 		System.out.println(s1);
 		System.out.println(s2);
 		
 		//通过反射的方式直接调用私有构造器
-//		Class<SingletonDemo6> clazz = (Class<SingletonDemo6>) Class.forName("com.bjsxt.singleton.SingletonDemo6");
+//		Class<SingletonDemo6> clazz = (Class<SingletonDemo6>) Class.forName("designParttern.singleton.SingletonDemo6");
 //		Constructor<SingletonDemo6> c = clazz.getDeclaredConstructor(null);
 //		c.setAccessible(true);
 //		SingletonDemo6  s3 = c.newInstance();
@@ -34,12 +34,26 @@ public class Client2 {
 		oos.writeObject(s1);
 		oos.close();
 		fos.close();
-		
+
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("d:/a.txt"));
-		SingletonDemo6 s3 =  (SingletonDemo6) ois.readObject();
+		SingletonDemo4 s3 =  (SingletonDemo4) ois.readObject();
+//		SingletonDemo6 s3 =  (SingletonDemo6) ois.readObject();
 		ois.close();
 		System.out.println(s3);
 		
 		
 	}
+	
+	public class StatusExposingServletResponse {
+		private int httpStatus;
+
+
+
+		public int getStatus() {
+			return this.httpStatus;
+		}
+	}
+
 }
+
+
