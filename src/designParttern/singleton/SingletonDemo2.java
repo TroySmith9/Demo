@@ -14,7 +14,7 @@ public class SingletonDemo2 {
 	}
 	
 	//方法同步，调用效率低！
-	public static  synchronized SingletonDemo2  getInstance(){
+	public static synchronized SingletonDemo2 getInstance() {
 		if(instance==null){
 			instance = new SingletonDemo2();
 		}
