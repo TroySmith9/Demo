@@ -17,23 +17,23 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
  * Created by yiban on 2016/10/28.
  */
 public class SqlCreater {
-	private static ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context-util.xml");
-	private static JdbcTemplate jdbcTemplate = (JdbcTemplate) applicationContext.getBean("jdbcTemplate");
+	private static ApplicationContext applicationContext;
+	private static JdbcTemplate jdbcTemplate;
 
 	public static void main(String[] args) {
 		try {
 			init();
 //			String sql=" show tables ";
-			String sql="SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES";
-			SqlRowSet rowset=jdbcTemplate.queryForRowSet(sql);
+			String sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES";
+			SqlRowSet rowset = jdbcTemplate.queryForRowSet(sql);
 			System.out.println("*******");
-			List<String> tableList=new ArrayList<String>();
-			while (rowset.next()){
+			List<String> tableList = new ArrayList<String>();
+			while (rowset.next()) {
 				tableList.add(rowset.getString(1));
 			}
-			for (String tableName:tableList){
-				String querySql="select * from "+tableName+" limit 1";
-				SqlRowSet sqlRowSet= jdbcTemplate.queryForRowSet(querySql);
+			for (String tableName : tableList) {
+				String querySql = "select * from " + tableName + " limit 1";
+				SqlRowSet sqlRowSet = jdbcTemplate.queryForRowSet(querySql);
 				sqlRowSet.getMetaData();
 			}
 //			String tableName = "t_user";
@@ -42,7 +42,6 @@ public class SqlCreater {
 //			StringBuilder stringBuilder = new StringBuilder(getSqlMapHeader(nameSpace));
 //			stringBuilder.append(createInsertSql(columns,tableName)).toString();
 //			stringBuilder.append("\n</sqlMap>");
-
 //			outPutFile(tableName, stringBuilder);
 
 		} catch (Exception e) {
