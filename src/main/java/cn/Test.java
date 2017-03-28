@@ -135,7 +135,7 @@ public class Test {// extends Date
         try {
             URL url =
                     new URL(
-                            "http://test.feidee.net/stat/weixin_ad.do?muid=f05d122eac30681772a62812b23df2f3&click_time=1431403499&appid=372353614&click_id=007210548a030059ccdfd1d4&app_type=ios&advertiser_id=1606583");
+                            "http://www.baidu.com");
             URLConnection conn = url.openConnection();
             conn.connect();
             InputStream is = conn.getInputStream();

@@ -37,7 +37,6 @@ public class Temp {
 //                "order by account.ordered ";
 //        System.out.println(sql);
         Integer in = null;
-//        System.out.println(getClientImgName("http://test.feidee.net/group1/M00/ED/BD/CskDIFh9iQmEHogrAAAAAJZU_Vg17.jpeg"));
     }
 
     

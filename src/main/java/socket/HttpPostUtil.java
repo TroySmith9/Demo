@@ -219,7 +219,7 @@ public class HttpPostUtil {
 	
 	
 	public static void main(String[] args) throws Exception{
-		HttpPostUtil u = new HttpPostUtil("http://test.feidee.net/money-w/syncUserCheck?UserName=test12@kd.com&Password=123456&encode=&isDetail=true&protocolVersion=3.0&userKey=&userType=&Model=iPhone&ProductName=&ProductVersion=&Locale=&SyncBooks=[{%27SyncAccountBookID%27:1674290,%27UDID%27:%27wwww%27,%27SyncMode%27:%27auto%27},{%27SyncAccountBookID%27:1716690,%27UDID%27:%27%27,%27SyncMode%27:%27auto%27}]");
+		HttpPostUtil u = new HttpPostUtil("http://www.baidu.com");
 		u.addFileParameter("file1", new File("src"));
 		u.addTextParameter("param1", "value");
 		String result = new String(u.send(true).getResponseContent());

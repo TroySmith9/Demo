@@ -604,8 +604,8 @@ public class StringUtils {
 	
 	/**
 	 * 隐藏邮箱处理
-	 * @param email test@feidee.com
-	 * @return t****t@feidee.com
+	 * @param email 
+	 * @return 
 	 */
 	public static String handleEmail(String email){
 		if(StringUtils.isEmpty(email)) return null;

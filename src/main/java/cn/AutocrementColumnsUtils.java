@@ -16,9 +16,9 @@ public class AutocrementColumnsUtils {
 			// 数据库连接
 			String url = "jdbc:mysql://10.201.3.31:3232/test_money_new";
 			// 用户名
-			String user = "SSJ_feidee";
+			String user = "";
 			// 数据库密码
-			String password = "Hf#df_6c#b7,d8d#2ee6_fe85H3d";
+			String password = "";
 			// 加载驱动
 			Class.forName(driver);
 			// 获取链接
