@@ -9,4 +9,5 @@ logs/
 sdklog/
 /jsonconvertor/
 .idea
+.idea/
 libraries/
