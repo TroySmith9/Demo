@@ -1,12 +1,12 @@
 <span style="font-size: small;"><?xml version="1.0" encoding="UTF-8" ?>
     <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
     <log4j:configuration debug="true" xmlns:log4j='http://jakarta.apache.org/log4j/'>
-        <!-- 企业欠费邮件提醒 ,发送至客服,市场部-->
+    <!-- 企业欠费邮件提醒 ,发送至客服,市场部-->
         <appender name="LOG.REMIND_SMTP" class="org.apache.log4j.net.SMTPAppender">
-            <param name="from" value="support@tdt-lbs.com"/>
-            <param name="to" value="zhangweiyang@tdt-lbs.com,kefu@tdt-lbs.com,shichang@tdt-lbs.com"/><!--多个邮件地址用逗号分割-->
+            <param name="from" value="test@troy.com"/>
+            <param name="to" value="test@troy.com"/><!--多个邮件地址用逗号分割-->
             <param name="subject" value="企业欠费通知"/>
-            <param name="SMTPHost" value="mail.tdt-lbs.com"/>
+            <param name="SMTPHost" value="test@troy.com"/>
             <triggeringPolicy
                     class="com.tdt.log4j.extend.MockTriggeringEventEvaluator$RemindMockTriggeringEventEvaluator"/> <!--邮件发送策略，自已定义-->
             <layout class="org.apache.log4j.PatternLayout">
@@ -20,8 +20,8 @@
         </appender>
         <!-- 程序出错邮件提醒,发送至程序开发人员 -->
         <appender name="LOG.ERROR_SMTP" class="org.apache.log4j.net.SMTPAppender">
-            <param name="from" value="support@tdt-lbs.com"/>
-            <param name="to" value="zhangweiyang@tdt-lbs.com"/>
+            <param name="from" value="test@troy.com"/>
+            <param name="to" value="test@troy.com"/>
             <param name="subject" value="MRM平台自动跟踪定位程序出错"/>
             <param name="SMTPHost" value="mail.tdt-lbs.com"/>
             <triggeringPolicy
