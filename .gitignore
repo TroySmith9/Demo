@@ -7,6 +7,5 @@
 target/
 logs/
 sdklog/
-.idea
 .idea/
 libraries/
