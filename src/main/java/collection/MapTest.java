@@ -6,7 +6,17 @@ import java.util.Map;
 public class MapTest {
 
 	public static void main(String[] args) {
-		Map<String, String> map = new HashMap<String, String>();
+		Map<String, Object> map = new HashMap<String, Object>();
+//		testMap2String(map);
+		map.put("integer",null);
+		if ((Integer) map.get("integer") == 1) {
+			System.out.println(true);
+		}else {
+			System.out.println(false);
+		}
+	}
+
+	private static void testMap2String(Map<String, String> map) {
 		map.put("dim", "aa");
 		map.put("11", "aa");
 		System.out.println(map.toString());
