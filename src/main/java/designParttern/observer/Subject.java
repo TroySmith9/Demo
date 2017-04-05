@@ -16,6 +16,9 @@ public class Subject {
 
 	//通知所有的观察者更新状态
 	public void notifyAllObservers(){
+
+		
+		
 		for (Observer obs : list) {
 			obs.update(this);
 		}

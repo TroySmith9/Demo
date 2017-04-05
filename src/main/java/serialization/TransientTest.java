@@ -67,7 +67,7 @@ public class TransientTest implements Serializable {
     }
 }
 
-abstract class ASerialObject {
+class ASerialObject {
     private int no;
 
     private String name;

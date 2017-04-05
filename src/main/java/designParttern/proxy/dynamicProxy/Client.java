@@ -7,9 +7,8 @@ public class Client {
 		
 		Star realStar = new RealStar();
 		StarHandler handler = new StarHandler(realStar);
-		
-		Star proxy = (Star) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), 
-				new Class[]{Star.class}, handler);
+
+		Star proxy = (Star) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(),new Class[]{Star.class}, handler);
 		
 		proxy.sing();
 		
