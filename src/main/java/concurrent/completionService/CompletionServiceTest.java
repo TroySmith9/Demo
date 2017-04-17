@@ -8,11 +8,9 @@ import java.util.concurrent.Executors;
 
 /**
  * 使用CompletionService
- *
- * @author Xingle
+ * CompletionService实现了生产者提交任务和消费者获取结果的解耦，生产者和消费者都不用关心任务的完成顺序，由CompletionService来保证，消费者一定是按照任务完成的先后顺序来获取执行结果
+ * ExecutorCompletionService是CompletionService的实现，融合了线程池Executor和阻塞队列BlockingQueue的功能。
  * @ClassName: CompletionServiceTest
- * TODO
- * @date 2014-9-16 上午11:32:45
  */
 public class CompletionServiceTest {
 

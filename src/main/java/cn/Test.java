@@ -34,17 +34,18 @@ public class Test {// extends Date
 
     public static void main(String[] args) {
 //		testArrayIndexAddAdd();
-        byte b2 = 10;
-        for (int i = 0; i <1000 ; i++) {
-            byte b1 = (byte) i;
-            if (!(b1 == (b1 & 0xff))){
-                System.out.println(MessageFormat.format("b1:{0} ***  b1 & 0xf:{1} *** i:{2}", b1, (b1 & 0xf), i));
-            }
-        }
+//        byte b2 = 10;
+//        for (int i = 0; i <1000 ; i++) {
+//            byte b1 = (byte) i;
+//            if (!(b1 == (b1 & 0xff))){
+//                System.out.println(MessageFormat.format("b1:{0} ***  b1 & 0xf:{1} *** i:{2}", b1, (b1 & 0xf), i));
+//            }
+//        }
 //        System.out.println(b2 == (b2 & 0xf));
 //        System.out.println(b2 & 0xf);
 //        System.out.println(b2 & 0xff);
-
+        System.out.println("dafaeaf");
+        
 
     }
 

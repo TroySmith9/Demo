@@ -15,8 +15,9 @@ public class BitOpetrationTest {
 //        System.out.println(Integer.parseInt("100",2));
 //        rightMove(8, 4);
 //        rightMove(9, 5);
-        System.out.println(System.nanoTime());
-        System.out.println(System.currentTimeMillis());
+//        System.out.println(System.nanoTime());
+//        System.out.println(System.currentTimeMillis());
+        testBitOperation();
 //        rightMove(127,2);
 //        rightMove(128,2);
 //        rightMove(1024,2);
@@ -69,16 +70,16 @@ public class BitOpetrationTest {
         /* 
         ~ ‘非’ 运算符是将目标数的进制去反，即0变成1 ，1变成0 
         2的二进制码为 00000010 ， 它取反为11111101 ，可见取反后结果为负数（二进制负数转换为十进制的步骤为：将二进制去反，然后+1） 
-         将 11111101 转换为10进制 ，第一步去反 得到 00000010 然后 加1 得到 00000011 ，得到的结果为3 ，然后在前面加上负号就可以了 
+         将 1111 1101 转换为10进制 ，第一步去反 得到 0000 0010 然后 加1 得到 00000011 ，得到的结果为3 ，然后在前面加上负号就可以了 
          所以结果为-3 
          */
-        System.out.println(~2);  
+        System.out.println("~2:"+~2);  
           
         /* 
           ^ 异或 ，计算方式为：两个二进制数的位相同则为0 不同则为1 
           23转换为二进制为：00010111 
           12转换为二进制为：00001100 
-                    计算结果为：00011011  =  27 
+                计算结果为：00011011  =  27 
          */
         System.out.println(23 ^ 12);   
           
