@@ -14,8 +14,8 @@ public class TransientTest implements Serializable {
     private SerialObject serialObject;
 
     public static void main(String[] args) {
-        ASerialObject aSerialObject = new ASerialObjectImpl(1, "aaa", "aserialobject");
-        ASerialObject aSerialObject2 = new ASerialObjectImpl(2, "bbb", "aserialobject2");
+        ASerialObject aSerialObject = new ASerialObjectImpl(1, "aaa", "aserialobject","child");
+        ASerialObject aSerialObject2 = new ASerialObjectImpl(2, "bbb", "aserialobject2","child");
         SerialObject serialObject = new SerialObject(3, "ccc", "serialObject");
         TransientTest test = new TransientTest(aSerialObject, aSerialObject2, serialObject);
         writeFile(test, "H://obj.txt");
@@ -109,17 +109,38 @@ class ASerialObject {
 
     @Override
     public String toString() {
-        return "no:" + no + " name:" + name + " object:" + object;
+        return " no:" + no + " name:" + name + " object:" + object;
     }
 }
 
 class ASerialObjectImpl extends ASerialObject implements Serializable {
+    
+    private String memo;
     public ASerialObjectImpl() {
         super();
     }
 
     public ASerialObjectImpl(int no, String name, Object object) {
         super(no, name, object);
+    }
+
+    public ASerialObjectImpl(int no, String name, Object object,String memo) {
+        super(no, name, object);
+        setMemo(memo);
+    }
+
+
+    public String getMemo() {
+        return memo;
+    }
+
+    public void setMemo(String memo) {
+        this.memo = memo;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+" memo:"+memo;
     }
 }
 
@@ -163,6 +184,6 @@ class SerialObject implements Serializable {
 
     @Override
     public String toString() {
-        return "no:" + no + " name:" + name + " object:" + object;
+        return " no:" + no + " name:" + name + " object:" + object;
     }
 }
