@@ -12,7 +12,7 @@ import java.util.concurrent.Semaphore;
 public class BoundedExecutor {
     private final Executor exec;
     private final Semaphore semaphore;
-    int bound;
+    private int bound;
 
     public BoundedExecutor(Executor exec, int bound) {
         this.exec = exec;
