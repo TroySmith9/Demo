@@ -1,4 +1,4 @@
-package cn;
+package cn.lang;
 
 import java.io.*;
 import java.sql.Timestamp;

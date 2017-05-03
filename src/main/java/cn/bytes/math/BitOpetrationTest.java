@@ -7,17 +7,18 @@ public class BitOpetrationTest {
 
     public static void main(String[] args) {
 //        System.out.println(Integer.toBinaryString(2));
-//        System.out.println(Integer.toBinaryString(-2));
+//        System.out.println(Integer.toBinaryString(-1));
+        System.out.println(Integer.getInteger("555",5));;
 //        String str="111011100110101100101000000000";
 //        System.out.println("111111111111111111111111111110".length());
         /* 符号为:最高位同时表示图号，0为正数，1为负数 */
-//        testBitOperation();
+        testBitOperation();
 //        System.out.println(Integer.parseInt("100",2));
 //        rightMove(8, 4);
 //        rightMove(9, 5);
 //        System.out.println(System.nanoTime());
 //        System.out.println(System.currentTimeMillis());
-        testBitOperation();
+//        testBitOperation();
 //        rightMove(127,2);
 //        rightMove(128,2);
 //        rightMove(1024,2);
@@ -62,8 +63,8 @@ public class BitOpetrationTest {
             例如：-85 
             第一步：得到绝对值 85 
             第二步：转换为二进制：01010101 
-            第二步：取反：                10101010 
-            第三步：加1：                 10101011 
+            第二步：取反：       10101010 
+            第三步：加1：        10101011 
             所以，-85转换为二进制为  10101011 
      */  
           
@@ -73,7 +74,7 @@ public class BitOpetrationTest {
          将 1111 1101 转换为10进制 ，第一步去反 得到 0000 0010 然后 加1 得到 00000011 ，得到的结果为3 ，然后在前面加上负号就可以了 
          所以结果为-3 
          */
-        System.out.println("~2:"+~2);  
+        System.out.println("~5:"+~5);  
           
         /* 
           ^ 异或 ，计算方式为：两个二进制数的位相同则为0 不同则为1 
