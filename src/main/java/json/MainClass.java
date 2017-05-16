@@ -9,9 +9,13 @@ import java.util.List;
 public class MainClass {
 
 	public static void main(String[] args) {
-		testJsonBean();
-		TestJsonAttribute();
-		testJsonArray();
+//		testJsonBean();
+//		TestJsonAttribute();
+//		testJsonArray();
+		JSONObject jsonObj = new JSONObject();
+		jsonObj.put("name", "tom");
+		System.out.println(jsonObj.getString("nam"));
+		
 	}
 
 	private static void TestJsonAttribute() {
