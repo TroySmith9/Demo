@@ -28,8 +28,15 @@ public class Temp {
 //            System.out.println(parseStrToMd5L32(imei));
 //        }
 
-        System.out.println(generateMuid("79927398712"));
+//        System.out.println(generateMuid("79927398712"));
+//        System.out.println(parseStrToMd5L32("865168029272605"));
+        
+        Short sh=1;
+        Integer integer = Integer.valueOf(sh);
+        System.out.println(integer);
+        
     }
+    
 
     /**
      * md5加密

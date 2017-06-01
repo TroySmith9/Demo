@@ -12,8 +12,7 @@ public class SecurityUtils {
     public static void main(String[] args) {
         String passowrd = "&*($HJDGH4867%&T345386754OHYOH*^(ughiuR5fu&f&$KHAOS$&^%";
 
-//        System.out.println(decrypt("435fbcdd5e22c3f58c648df65a99f98b4578417563d94031d5363c0cb9e18dc3",passowrd));;
-//        System.out.println(encrypt("UDID:868192022142851",passowrd));
+        System.out.println(decrypt("UDID:868192022142851", passowrd));
 //        Assert.assertEquals(encrypt("UDID:5A58EF1E-EEF2-478D-94EE-709B98407589",passowrd),
 //                "bbf5e7f4cbd27afa301fe15f7931d83bb7b6097606c95f72ba8847f53aa7b7305c52ae3c9461beec64c1920eac18faa9");
     }

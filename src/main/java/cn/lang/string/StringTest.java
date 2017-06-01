@@ -1,4 +1,4 @@
-package cn.lang;
+package cn.lang.string;
 public class StringTest {
 
 	public static void main(String[] args) {
