@@ -1,2 +1,3 @@
 # Demo
-java  demo for test
+java  demo for learning
+
