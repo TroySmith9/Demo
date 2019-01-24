@@ -3,17 +3,21 @@ package collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapTest {
+public class TestMap {
 
 	public static void main(String[] args) {
-		Map<String, Object> map = new HashMap<String, Object>();
+		Map<Object, Object> map = new HashMap<Object, Object>();
+		map.put(null,"null");
+		map.put(0,0);
+		System.out.println(map.get(null));
+		System.out.println(map.get(0));
 //		testMap2String(map);
-		map.put("integer",null);
-		if ((Integer) map.get("integer") == 1) {
-			System.out.println(true);
-		}else {
-			System.out.println(false);
-		}
+//		map.put("integer",null);
+//		if ((Integer) map.get("integer") == 1) {
+//			System.out.println(true);
+//		}else {
+//			System.out.println(false);
+//		}
 	}
 
 	private static void testMap2String(Map<String, String> map) {
